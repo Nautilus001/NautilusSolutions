@@ -28,17 +28,19 @@ export default function ServicesPage() {
 
       <Process />
 
-      <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
-        <SectionHeading
-          eyebrow="FAQ"
-          title="FAQ"
-          align="center"
-          className="items-center"
-        />
-        <div className="mt-10">
-          <FaqAccordion items={faqs} />
-        </div>
-      </section>
+      {faqs.length > 0 && (
+        <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
+          <SectionHeading
+            eyebrow="FAQ"
+            title="FAQ"
+            align="center"
+            className="items-center"
+          />
+          <div className="mt-10">
+            <FaqAccordion items={faqs} />
+          </div>
+        </section>
+      )}
 
       <section className="border-t border-border bg-card">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-16 text-center sm:px-6">

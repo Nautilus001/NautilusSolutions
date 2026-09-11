@@ -224,3 +224,21 @@ export const team = [
     image: '',
   },
 ]
+
+export const stats = about.stats
+
+export const faqs: { question: string; answer: string }[] = []
+
+export const projects = [1, 2, 3].map((n) => ({
+  slug: `project-${n}`,
+  title: 'Copy later',
+  client: 'Copy later',
+  category: 'Copy later',
+  summary: 'Copy later',
+  image: '',
+  metrics: [
+    { label: 'Copy later', value: 'Copy later' },
+    { label: 'Copy later', value: 'Copy later' },
+  ],
+  tags: [] as string[],
+}))
