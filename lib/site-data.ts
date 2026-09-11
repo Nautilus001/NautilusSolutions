@@ -192,3 +192,35 @@ export const homeContact = {
 }
 
 export const values = whyUsCards
+
+export const about = {
+  heroTitle: 'A small team that likes people as much as software.',
+  heroLine:
+    "We're Nautilus Solutions. We take the tech so you can get back to changing the world.",
+  storyTitle: 'How we got here',
+  story: [
+    'Justin started by fixing small tech headaches for friends, then writing software to optimize his tasks at work.',
+    'He subcontracted for several years with a (fantastic) digital marketing agency, and now is leading a team of professional fix-it specialists who love giving time back to business owners.',
+    'You tell us how your day goes. We give you more hours in the lab, in the field, with customers, building — whatever it is you love, we want you to have more!',
+  ],
+  mission: 'People people — and also computer people :)',
+  stats: [
+    { value: '3+', label: 'Projects' },
+    { value: '4+', label: 'Industries' },
+    { value: '100%', label: 'Satisfaction guarantee' },
+  ],
+  teamIntro:
+    "You'll hear from a person who already knows your project. No account-manager maze.",
+  ctaTitle: 'Want a team that actually picks up?',
+  ctaLine: "Tell us what's in the way. We'll write back like a human.",
+  ctaButton: "Let's talk",
+}
+
+export const team = [
+  {
+    name: 'Justin Bushfield',
+    role: 'Founder',
+    bio: 'Justin worked his way through a Software Engineering degree as a technical consultant. Now, he is pursuing his passion to enable people to do the work they love.',
+    image: '',
+  },
+]
