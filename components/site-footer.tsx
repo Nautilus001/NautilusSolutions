@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import { Mail } from 'lucide-react'
 import { Logo } from '@/components/logo'
-import { firmName, leadInbox, services } from '@/lib/site-data'
+import { firmName, services } from '@/lib/site-data'
 
 const company = [
   { href: '/about', label: 'About' },
@@ -55,12 +54,14 @@ export function SiteFooter() {
 
         <div>
           <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
-          <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2.5">
-              <Mail className="size-4 text-primary" />
-              <a href={`mailto:${leadInbox}`} className="hover:text-primary">
-                {leadInbox}
-              </a>
+          <ul className="mt-4 space-y-2.5">
+            <li>
+              <Link
+                href="/contact"
+                className="text-sm text-muted-foreground transition-colors hover:text-primary"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

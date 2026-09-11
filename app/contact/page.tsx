@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
-import { Mail } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { LeadForm } from '@/components/lead-form'
-import { contactPage, leadInbox } from '@/lib/site-data'
+import { contactPage } from '@/lib/site-data'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -27,23 +26,6 @@ export default function ContactPage() {
             <p className="mt-3 leading-relaxed text-muted-foreground">
               {contactPage.asideLine}
             </p>
-
-            <ul className="mt-8 space-y-5">
-              <li className="flex items-start gap-4">
-                <span className="flex size-11 shrink-0 items-center justify-center rounded-lg bg-secondary/10 text-secondary">
-                  <Mail className="size-5" />
-                </span>
-                <div>
-                  <p className="text-sm font-medium text-muted-foreground">Email</p>
-                  <a
-                    href={`mailto:${leadInbox}`}
-                    className="text-base font-medium text-foreground transition-colors hover:text-primary"
-                  >
-                    {leadInbox}
-                  </a>
-                </div>
-              </li>
-            </ul>
           </div>
 
           <div>

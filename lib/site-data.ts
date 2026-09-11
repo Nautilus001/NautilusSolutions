@@ -7,7 +7,6 @@ import {
 } from 'lucide-react'
 
 export const firmName = 'Nautilus Solutions'
-export const leadInbox = 'justinbushfield@gmail.com'
 
 export const hero = {
   eyebrow: "You didn't start a business to fight a computer.",
@@ -189,7 +188,7 @@ export const contactPage = {
   heroTitle: "Let's get to know each other",
   heroLine: 'A few sentences is plenty. A real person will follow up.',
   asideTitle: 'Prefer to skip the form?',
-  asideLine: 'Email us. We actually read it.',
+  asideLine: "Use the form — a real person will follow up.",
   formTitle: "Tell us what's in the way",
 }
 
