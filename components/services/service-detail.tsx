@@ -38,20 +38,17 @@ export function ServiceDetail({
             </li>
           ))}
         </ul>
-        <div className="mt-8 flex items-center gap-5">
+        <div className="mt-8">
           <Button
             nativeButton={false}
             className="gap-2 bg-secondary text-secondary-foreground [a]:hover:bg-secondary/90"
             render={
               <Link href="/contact">
-                Request a quote
+                Let's talk
                 <ArrowRight className="size-4" />
               </Link>
             }
           />
-          <p className="text-sm text-muted-foreground">
-            From <span className="font-semibold text-foreground">{service.startingPrice}</span>
-          </p>
         </div>
       </div>
 

@@ -23,7 +23,8 @@ export const metadata: Metadata = {
     default: firmName,
     template: `%s — ${firmName}`,
   },
-  description: firmName,
+  description:
+    "You handle the business. We'll handle the tech. Websites, apps, tools, and everything in between — in plain English.",
 }
 
 export const viewport: Viewport = {

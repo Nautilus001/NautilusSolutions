@@ -1,5 +1,5 @@
 import { SectionHeading } from '@/components/section-heading'
-import { copyLater } from '@/lib/site-data'
+const copyLater = 'Copy later'
 
 const steps = [1, 2, 3, 4]
 

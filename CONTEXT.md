@@ -21,7 +21,7 @@ A prospective client's inquiry submitted on the marketing site (name, email, mes
 _Avoid_: customer, ticket, contact (the page is Contact; the thing submitted is a Lead)
 
 **Service**:
-A packaged offering Nautilus Solutions sells.
+A packaged offering Nautilus Solutions sells. The catalog is Website, App Development, Workflows that work for you, and Consulting.
 _Avoid_: product
 
 **Project**:

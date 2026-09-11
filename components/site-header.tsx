@@ -53,7 +53,7 @@ export function SiteHeader() {
             size="lg"
             nativeButton={false}
             className="bg-secondary text-secondary-foreground [a]:hover:bg-secondary/90"
-            render={<Link href="/contact">Get a quote</Link>}
+            render={<Link href="/contact">Let's talk</Link>}
           />
         </div>
 
@@ -99,7 +99,7 @@ export function SiteHeader() {
               size="lg"
               nativeButton={false}
               className="mt-2 bg-secondary text-secondary-foreground [a]:hover:bg-secondary/90"
-              render={<Link href="/contact" onClick={() => setOpen(false)}>Get a quote</Link>}
+              render={<Link href="/contact" onClick={() => setOpen(false)}>Let's talk</Link>}
             />
           </nav>
         </div>

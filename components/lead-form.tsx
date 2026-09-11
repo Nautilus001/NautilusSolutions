@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react'
 import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { serviceSelectOptions } from '@/lib/site-data'
 import { cn } from '@/lib/utils'
 
 type LeadState = {
@@ -84,11 +85,28 @@ export function LeadForm({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="flex flex-col gap-1.5">
-        <label htmlFor="company" className="text-sm font-medium text-foreground">
-          Company <span className="text-muted-foreground">(optional)</span>
-        </label>
-        <input id="company" name="company" className={fieldClass} />
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="company" className="text-sm font-medium text-foreground">
+            Company <span className="text-muted-foreground">(optional)</span>
+          </label>
+          <input id="company" name="company" className={fieldClass} />
+        </div>
+        <div className="flex flex-col gap-1.5">
+          <label htmlFor="service" className="text-sm font-medium text-foreground">
+            What can we help with?
+          </label>
+          <select id="service" name="service" defaultValue="" className={fieldClass}>
+            <option value="" disabled>
+              Select one
+            </option>
+            {serviceSelectOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -118,7 +136,7 @@ export function LeadForm({ className }: { className?: string }) {
         className="mt-1 min-h-12 self-start bg-primary text-primary-foreground hover:bg-primary/90"
       >
         {pending && <Loader2 className="size-4 animate-spin" />}
-        {pending ? 'Sending…' : 'Send message'}
+        {pending ? 'Sending…' : 'Send a note'}
       </Button>
     </form>
   )

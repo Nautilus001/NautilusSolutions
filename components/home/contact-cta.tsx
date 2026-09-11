@@ -1,4 +1,6 @@
+import { CheckCircle2 } from 'lucide-react'
 import { LeadForm } from '@/components/lead-form'
+import { homeContact } from '@/lib/site-data'
 
 export function ContactCta() {
   return (
@@ -10,12 +12,18 @@ export function ContactCta() {
             Contact
           </span>
           <h2 className="mt-3 text-balance text-3xl font-bold text-foreground sm:text-4xl">
-            Contact
+            {homeContact.title}
           </h2>
-          <div className="mt-4 h-16 max-w-md rounded-md bg-muted/60" aria-hidden="true" />
+          <p className="mt-4 max-w-md text-pretty leading-relaxed text-muted-foreground">
+            {homeContact.line}
+          </p>
+
           <ul className="mt-8 space-y-3">
-            {[1, 2, 3].map((n) => (
-              <li key={n} className="h-5 max-w-xs rounded-md bg-muted/50" />
+            {homeContact.points.map((point) => (
+              <li key={point} className="flex items-center gap-3 text-sm text-foreground">
+                <CheckCircle2 className="size-5 shrink-0 text-primary" />
+                {point}
+              </li>
             ))}
           </ul>
         </div>

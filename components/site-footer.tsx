@@ -1,27 +1,13 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { Logo } from '@/components/logo'
-import { copyLater, firmName, leadInbox } from '@/lib/site-data'
+import { firmName, leadInbox, services } from '@/lib/site-data'
 
-const nav = [
-  {
-    heading: 'Company',
-    items: [
-      { href: '/about', label: 'About' },
-      { href: '/portfolio', label: 'Portfolio' },
-      { href: '/services', label: 'Services' },
-      { href: '/contact', label: 'Contact' },
-    ],
-  },
-  {
-    heading: 'Services',
-    items: [
-      { href: '/services#service-1', label: copyLater },
-      { href: '/services#service-2', label: copyLater },
-      { href: '/services#service-3', label: copyLater },
-      { href: '/services#service-4', label: copyLater },
-    ],
-  },
+const company = [
+  { href: '/about', label: 'About' },
+  { href: '/portfolio', label: 'Portfolio' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function SiteFooter() {
@@ -30,26 +16,42 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div className="max-w-xs">
           <Logo />
-          <div className="mt-4 h-16 rounded-md bg-muted/60" aria-hidden="true" />
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            You handle the business. We&apos;ll handle the tech.
+          </p>
         </div>
 
-        {nav.map((col) => (
-          <div key={col.heading}>
-            <h3 className="text-sm font-semibold text-foreground">{col.heading}</h3>
-            <ul className="mt-4 space-y-2.5">
-              {col.items.map((item, index) => (
-                <li key={`${col.heading}-${index}`}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <div>
+          <h3 className="text-sm font-semibold text-foreground">Company</h3>
+          <ul className="mt-4 space-y-2.5">
+            {company.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold text-foreground">Services</h3>
+          <ul className="mt-4 space-y-2.5">
+            {services.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/services#${service.slug}`}
+                  className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                >
+                  {service.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div>
           <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
@@ -60,20 +62,12 @@ export function SiteFooter() {
                 {leadInbox}
               </a>
             </li>
-            <li className="flex items-center gap-2.5">
-              <Phone className="size-4 text-primary" />
-              <span>{copyLater}</span>
-            </li>
-            <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
-              <span>{copyLater}</span>
-            </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 sm:flex-row sm:px-6">
+        <div className="mx-auto flex max-w-6xl items-center px-4 py-5 sm:px-6">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} {firmName}
           </p>

@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 import { PageHero } from '@/components/page-hero'
 import { LeadForm } from '@/components/lead-form'
-import { copyLater, leadInbox } from '@/lib/site-data'
+import { leadInbox } from '@/lib/site-data'
+
+const copyLater = 'Copy later'
 
 export const metadata: Metadata = {
   title: 'Contact',
