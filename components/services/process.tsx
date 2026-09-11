@@ -1,7 +1,5 @@
 import { SectionHeading } from '@/components/section-heading'
-const copyLater = 'Copy later'
-
-const steps = [1, 2, 3, 4]
+import { processIntro, processSteps } from '@/lib/site-data'
 
 export function Process() {
   return (
@@ -9,23 +7,23 @@ export function Process() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
         <SectionHeading
           eyebrow="Process"
-          title="Process"
+          title={processIntro.title}
           className="[&_h2]:text-secondary-foreground [&_p]:text-secondary-foreground/75"
         />
 
         <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step) => (
+          {processSteps.map((step, index) => (
             <li
-              key={step}
+              key={step.title}
               className="rounded-xl border border-white/10 bg-white/5 p-6"
             >
               <span className="font-heading text-3xl font-bold text-primary">
-                {String(step).padStart(2, '0')}
+                {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 className="mt-3 text-lg font-semibold text-secondary-foreground/80">
-                {copyLater}
-              </h3>
-              <div className="mt-3 h-16 rounded-md bg-white/10" aria-hidden="true" />
+              <h3 className="mt-3 text-lg font-semibold">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-secondary-foreground/80">
+                {step.description}
+              </p>
             </li>
           ))}
         </ol>

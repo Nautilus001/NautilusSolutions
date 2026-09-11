@@ -75,16 +75,16 @@ export const services: Service[] = [
     description:
       'Clear, mobile-friendly, and easy to update. People understand what you do and how to reach you.',
     features: [
-      'Looks right on a phone',
-      'Plain-English pages',
-      'Easy to update later',
-      'A clear way to contact you',
+      'Mobile-first',
+      'Total control',
+      'Easy updates',
+      'Responsive support',
     ],
     deliverables: [
-      'A site that explains what you do',
-      'A simple way to change the words later',
-      'Help getting it live',
-      'Someone to call if it acts up',
+      'Mobile-first',
+      'Total control',
+      'Easy updates',
+      'Responsive support',
     ],
   },
   {
@@ -95,16 +95,14 @@ export const services: Service[] = [
     description:
       "When a website isn't enough — a tool your team or your customers actually use. We keep it simple until it needs to be more.",
     features: [
-      'Built around how you already work',
-      'Explained without jargon',
-      'Yours when we hand it over',
-      'Room to grow later',
+      'Built around how you work',
+      'You own all progress',
+      'Room to grow',
     ],
     deliverables: [
-      'A clear picture of what we are building',
-      'A working app you can try early',
-      'Training in plain English',
-      'The keys when we are done',
+      'Built around how you work',
+      'You own all progress',
+      'Room to grow',
     ],
   },
   {
@@ -115,16 +113,12 @@ export const services: Service[] = [
     description:
       'Faster, less busywork, but keeping what makes you you.',
     features: [
-      'We watch how the week actually goes',
-      'Cut the copy-paste and double-entry',
-      'Keep the parts customers love',
-      'No “new system” surprise',
+      'We watch how your day actually goes',
+      "We keep what you love, and fix what you don't!",
     ],
     deliverables: [
-      'A map of what is slowing you down',
-      'A simpler path for the same work',
-      'The busywork handled or gone',
-      'A team that already knows the new rhythm',
+      'We watch how your day actually goes',
+      "We keep what you love, and fix what you don't!",
     ],
   },
   {
@@ -135,16 +129,16 @@ export const services: Service[] = [
     description:
       'Looking for insights into how to grow? Where to optimize? Let’s find out how to supercharge your business.',
     features: [
-      'Honest look at what is working',
-      'Where time and money leak',
-      'A plan you can actually follow',
-      'No 80-page report you will never read',
+      "Keep what's working, rework what isn't",
+      'Take back your time and money',
+      'A plan you can follow, in plain English',
+      "We don't leave you with an 80-page document and a prayer — our team sits down until you understand, then follows up on action items",
     ],
     deliverables: [
-      'A conversation, not a lecture',
-      'A short list of what to do next',
-      'What to skip (and why)',
-      'Help doing the first steps if you want it',
+      "Keep what's working, rework what isn't",
+      'Take back your time and money',
+      'A plan you can follow, in plain English',
+      'A sit-down so you understand — plus follow-up on action items',
     ],
   },
 ]
@@ -227,7 +221,65 @@ export const team = [
 
 export const stats = about.stats
 
-export const faqs: { question: string; answer: string }[] = []
+export const servicesPage = {
+  heroTitle: 'We take it off your plate',
+  heroLine:
+    "Website, app, workflow, or a second set of eyes. If you're not sure which, say what is slowing you down — we'll help you pick.",
+  ctaTitle: "Not sure which service? That's normal.",
+  ctaLine: "Shoot us a message. We'll get in touch.",
+  ctaButton: "Let's talk",
+}
+
+export const processIntro = {
+  title: 'No secrets here, this is where the magic happens.',
+}
+
+export const processSteps = [
+  {
+    title: 'We listen',
+    description:
+      'You tell us how your day goes. We learn what drives you, what excites you, what works for you and your team.',
+  },
+  {
+    title: 'We build a plan',
+    description:
+      'Our exact action steps, the cost breakdown, what you can ignore. All in writing.',
+  },
+  {
+    title: 'We team up',
+    description:
+      'Our team regularly updates you on the progress. You see it early, you steer.',
+  },
+  {
+    title: 'You win',
+    description:
+      'The product is always yours. And we are always happy to lend a hand in the future.',
+  },
+]
+
+export const faqs: { question: string; answer: string }[] = [
+  {
+    question: 'Do I need to be technical?',
+    answer: "No. If we can't explain it simply, we haven't finished.",
+  },
+  {
+    question: 'How do I start?',
+    answer: 'Send a note. A real person will reply and suggest a next step.',
+  },
+  {
+    question: "I don't know what I need",
+    answer: "Perfect. Describe the headache. We'll help you name it.",
+  },
+  {
+    question: 'Who owns the work?',
+    answer: 'You. Data, logins, the thing we built. All yours.',
+  },
+  {
+    question: 'How do you charge?',
+    answer:
+      'We agree on a price and payment model beforehand, no surprise billing.',
+  },
+]
 
 export const projects = [1, 2, 3].map((n) => ({
   slug: `project-${n}`,
