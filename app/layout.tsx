@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { firmName } from '@/lib/site-data'
 import './globals.css'
 
 const inter = Inter({
@@ -19,19 +20,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Meridian Labs — Software Consulting & Custom Development',
-    template: '%s — Meridian Labs',
+    default: firmName,
+    template: `%s — ${firmName}`,
   },
-  description:
-    'Meridian Labs is a local software consultancy delivering web design, custom application development, platform migrations, and workflow optimization for growing businesses.',
-  generator: 'v0.app',
-  keywords: [
-    'software consulting',
-    'custom app development',
-    'web design',
-    'platform migration',
-    'workflow optimization',
-  ],
+  description: firmName,
 }
 
 export const viewport: Viewport = {

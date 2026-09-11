@@ -8,17 +8,13 @@ export function ServicesPreview() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-        <SectionHeading
-          eyebrow="What we do"
-          title="Four ways we help you ship"
-          description="Whether you need a new site, a custom platform, a careful migration, or leaner operations, we scope it clearly and deliver it cleanly."
-        />
+        <SectionHeading eyebrow="Services" title="Services" />
         <Button
           variant="outline"
           size="lg"
           nativeButton={false}
           className="shrink-0"
-          render={<Link href="/services">Explore all services</Link>}
+          render={<Link href="/services">Services</Link>}
         />
       </div>
 
@@ -35,19 +31,11 @@ export function ServicesPreview() {
               </span>
               <ArrowUpRight className="size-5 text-muted-foreground transition-colors group-hover:text-primary" />
             </div>
-            <h3 className="mt-5 text-lg font-semibold text-foreground">
+            <h3 className="mt-5 text-lg font-semibold text-muted-foreground">
               {service.title}
             </h3>
-            <p className="mt-1 text-sm font-medium text-primary">{service.tagline}</p>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              {service.description}
-            </p>
-            <p className="mt-5 text-sm text-muted-foreground">
-              Starting at{' '}
-              <span className="font-semibold text-foreground">
-                {service.startingPrice}
-              </span>
-            </p>
+            <div className="mt-3 h-16 rounded-md bg-muted/60" aria-hidden="true" />
+            <div className="mt-5 h-4 w-24 rounded-md bg-muted/50" aria-hidden="true" />
           </Link>
         ))}
       </div>

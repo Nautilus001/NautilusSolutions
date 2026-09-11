@@ -1,33 +1,22 @@
 import { values } from '@/lib/site-data'
 import { SectionHeading } from '@/components/section-heading'
 
-const credentials = [
-  'AWS Certified Solutions Architects',
-  'SOC 2-aware development practices',
-  'HIPAA & PCI experienced',
-  'Members, Nashville Tech Council',
-]
-
 export function Values() {
   return (
     <section className="border-y border-border bg-card">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
-        <SectionHeading
-          eyebrow="What we value"
-          title="The principles behind every project"
-          description="These are not posters on a wall. They shape how we scope, build, and hand off every engagement."
-        />
+        <SectionHeading eyebrow="Values" title="Values" />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {values.map((value) => (
+          {values.map((value, index) => (
             <div
-              key={value.title}
+              key={index}
               className="rounded-xl border border-border bg-background p-7"
             >
-              <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
-              <p className="mt-2 leading-relaxed text-muted-foreground">
-                {value.description}
-              </p>
+              <h3 className="text-lg font-semibold text-muted-foreground">
+                {value.title}
+              </h3>
+              <div className="mt-3 h-16 rounded-md bg-muted/60" aria-hidden="true" />
             </div>
           ))}
         </div>
@@ -37,13 +26,11 @@ export function Values() {
             Credentials
           </h3>
           <ul className="mt-4 flex flex-wrap gap-3">
-            {credentials.map((item) => (
+            {[1, 2, 3, 4].map((n) => (
               <li
-                key={item}
-                className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
-              >
-                {item}
-              </li>
+                key={n}
+                className="h-9 w-36 rounded-full border border-border bg-card"
+              />
             ))}
           </ul>
         </div>

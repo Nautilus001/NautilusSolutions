@@ -14,7 +14,7 @@ export function FaqAccordion({ items }: { items: Faq[] }) {
       {items.map((item, index) => {
         const isOpen = open === index
         return (
-          <div key={item.question}>
+          <div key={index}>
             <h3>
               <button
                 type="button"

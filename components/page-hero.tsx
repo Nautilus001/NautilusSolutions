@@ -5,7 +5,7 @@ export function PageHero({
 }: {
   eyebrow: string
   title: string
-  description: string
+  description?: string
 }) {
   return (
     <section className="border-b border-border bg-card">
@@ -17,9 +17,13 @@ export function PageHero({
         <h1 className="mt-4 max-w-3xl text-balance text-4xl font-bold leading-tight text-foreground sm:text-5xl">
           {title}
         </h1>
-        <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          {description}
-        </p>
+        {description ? (
+          <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+            {description}
+          </p>
+        ) : (
+          <div className="mt-5 h-14 max-w-2xl rounded-md bg-muted/60" aria-hidden="true" />
+        )}
       </div>
     </section>
   )
