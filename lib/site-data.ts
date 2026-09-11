@@ -185,6 +185,14 @@ export const homeContact = {
   ],
 }
 
+export const contactPage = {
+  heroTitle: "Let's get to know each other",
+  heroLine: 'A few sentences is plenty. A real person will follow up.',
+  asideTitle: 'Prefer to skip the form?',
+  asideLine: 'Email us. We actually read it.',
+  formTitle: "Tell us what's in the way",
+}
+
 export const values = whyUsCards
 
 export const about = {
@@ -281,16 +289,32 @@ export const faqs: { question: string; answer: string }[] = [
   },
 ]
 
-export const projects = [1, 2, 3].map((n) => ({
-  slug: `project-${n}`,
-  title: 'Copy later',
-  client: 'Copy later',
-  category: 'Copy later',
-  summary: 'Copy later',
-  image: '',
-  metrics: [
-    { label: 'Copy later', value: 'Copy later' },
-    { label: 'Copy later', value: 'Copy later' },
-  ],
-  tags: [] as string[],
-}))
+export const portfolioPage = {
+  heroTitle: 'Work that gives people their day back',
+  heroLine:
+    "We're filling this wall with real stories. Until then, here's the kind of help we show up for.",
+}
+
+export const projects = [
+  {
+    slug: 'website',
+    title: 'Website',
+    client: 'This site',
+    summary:
+      "A site that does its job. People know what you do and how to reach you. We built this one, so you know we are good at what we do.",
+  },
+  {
+    slug: 'bmc-tool',
+    title: 'A tool that fits your day',
+    client: 'Boston Medical Center',
+    summary:
+      'We built a tool for a research team at Boston Medical Center. We met with them, built a prototype, got their feedback. We designed around their needs, and their days. We actually got credit as co-authors on their paper — and when something goes wrong, we still pick up the phone.',
+  },
+  {
+    slug: 'advice',
+    title: 'Advice',
+    client: 'Legacy software, still running the day',
+    summary:
+      'We had a client come to us asking if it was time to change. They had a piece of legacy software that was running their day-to-day. Everything from the field to the office. Sales to sweat. It was a decade old and showing it. Slow page loads, frequent downtime, they were losing money fast. They had one question: "What do we do?" Our team immediately took action. We spent time getting to know their workflows. What did a day in the life look like? What are their must-haves, their nice-to-haves, and their don\'t-haves? And we rebuilt it. Fixed the slow loads, fixed the downtime issue. While we were at it, we beefed up security and added a few new features as a cherry-on-top. At the end of the day, they loved it, and we loved hearing about how it has revitalized their business.',
+  },
+]

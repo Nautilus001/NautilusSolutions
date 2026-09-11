@@ -25,5 +25,5 @@ A packaged offering Nautilus Solutions sells. The catalog is Website, App Develo
 _Avoid_: product
 
 **Project**:
-A past engagement shown on the portfolio page. Slots may exist before any real engagement is written.
+A past engagement shown on the portfolio page.
 _Avoid_: case study, work sample
